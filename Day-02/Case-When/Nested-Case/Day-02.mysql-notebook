@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\nshow databases;\n\nuse test;\nclear\nclean;\nshow tables;\n\nshow tables;\nselect * from finance_customers;\nselect customer_id, customer_name, last_transaction_days, balance,\ncase\n    when last_transaction_days < 30 then\n        case\n            when balance > 50000 then \"High Active\"\n            else \"Low Active\"\n        end\n    else \"Not Active\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, credit_score, income,\ncase\n    when credit_score > 700 then\n        case\n            when income > 75000 then \"Approved High Income\"\n            else \"Approved Low Income\"\n        end\n    else \"Not Approved\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, overdraft_amount, overdraft_used,\ncase\n    when overdraft_used = \"Yes\" then\n    case\n        when overdraft_amount > 5000 then \"High Overdraft\"\n        else \"Low Overdraft\"\n    end\n    else \"No Overdraft\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, investment_duration, return_rate,\n    case\n        when investment_duration > 5 then\n            case\n                when return_rate > 8 then \"High Returns\"\n                else \"Moderate Returns\"\n            end\n        else \"Short Term\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, transaction_amount, transaction_type,\n    case\n        when transaction_amount > 10000 then\n            case\n                when transaction_type = \"Transfer\" then \"Large Transfer\"\n                else \"Large Other\"\n            end\n        else \"Low Other\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, age, account_balance,\n    case\n        when age > 65 then\n            case\n                when account_balance < 1000 then \"At Risk Senior\"\n                else \"Senior Stable\"\n            end\n        else \"Not a Senior\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, card_type, usage_frequency,\n    case\n        when card_type = \"Platinum\" then\n            case\n                when usage_frequency > 20 then \"Heavy User Platinum\"\n                else \"Light User Platinum\"\n            end\n        else \"Non Platinum\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, repayment_status, delay_days,\n    case\n        when repayment_status = \"Delayed\" then\n            case\n                when delay_days > 30 then \"Long Delay\"\n                else \"Short Delay\"\n            end\n        else \"On Time\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, account_type, avg_monthly_balance,\n    case\n        when account_type = \"Savings\" then\n            case\n                when avg_monthly_balance > 10000 then \"Waived\"\n                else \"Not Waived\"\n            end\n        else \"Checking\"\n    end as status\nfrom finance_customers;\n",
+    "content": "\\about\nshow databases;\n\nuse test;\nclear\nclean;\nshow tables;\n\nshow tables;\nselect * from finance_customers;\nselect customer_id, customer_name, last_transaction_days, balance,\ncase\n    when last_transaction_days < 30 then\n        case\n            when balance > 50000 then \"High Active\"\n            else \"Low Active\"\n        end\n    else \"Not Active\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, credit_score, income,\ncase\n    when credit_score > 700 then\n        case\n            when income > 75000 then \"Approved High Income\"\n            else \"Approved Low Income\"\n        end\n    else \"Not Approved\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, overdraft_amount, overdraft_used,\ncase\n    when overdraft_used = \"Yes\" then\n    case\n        when overdraft_amount > 5000 then \"High Overdraft\"\n        else \"Low Overdraft\"\n    end\n    else \"No Overdraft\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, investment_duration, return_rate,\n    case\n        when investment_duration > 5 then\n            case\n                when return_rate > 8 then \"High Returns\"\n                else \"Moderate Returns\"\n            end\n        else \"Short Term\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, transaction_amount, transaction_type,\n    case\n        when transaction_amount > 10000 then\n            case\n                when transaction_type = \"Transfer\" then \"Large Transfer\"\n                else \"Large Other\"\n            end\n        else \"Low Other\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, age, account_balance,\n    case\n        when age > 65 then\n            case\n                when account_balance < 1000 then \"At Risk Senior\"\n                else \"Senior Stable\"\n            end\n        else \"Not a Senior\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, card_type, usage_frequency,\n    case\n        when card_type = \"Platinum\" then\n            case\n                when usage_frequency > 20 then \"Heavy User Platinum\"\n                else \"Light User Platinum\"\n            end\n        else \"Non Platinum\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, repayment_status, delay_days,\n    case\n        when repayment_status = \"Delayed\" then\n            case\n                when delay_days > 30 then \"Long Delay\"\n                else \"Short Delay\"\n            end\n        else \"On Time\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, account_type, avg_monthly_balance,\n    case\n        when account_type = \"Savings\" then\n            case\n                when avg_monthly_balance > 10000 then \"Waived\"\n                else \"Not Waived\"\n            end\n        else \"Checking\"\n    end as status\nfrom finance_customers;\nshow tables;\n\nselect * from flightbookings;\nselect booking_id, passenger_name, flight_class, distance_km,\n    case\n        when distance_km > 1500 then\n            case\n                when flight_class = \"Business\" then \"Long Haul Business\"\n                else \"Long Haul Economy\"\n            end\n        else \"Others\"\n    end as status\nfrom flightbookings;\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,26 +15,26 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 109,
-                    "column": 1
+                    "lineNumber": 120,
+                    "column": 18
                 },
                 "position": {
-                    "lineNumber": 109,
-                    "column": 1
+                    "lineNumber": 120,
+                    "column": 18
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 99,
+                "lineNumber": 112,
                 "column": 1
             },
-            "firstPositionDeltaTop": 94
+            "firstPositionDeltaTop": 119
         },
         "contributionsState": {
             "editor.contrib.folding": {},
-            "editor.contrib.wordHighlighter": false
+            "editor.contrib.wordHighlighter": true
         }
     },
     "contexts": [
@@ -7073,7 +7073,7 @@
                         "befc5748-8817-4e79-c283-b20f87aa9683"
                     ]
                 },
-                "currentHeight": 295,
+                "currentHeight": 36,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -7722,7 +7722,7 @@
                         "a6ba7ab0-ded2-4969-92c7-536947b5aa32"
                     ]
                 },
-                "currentHeight": 242,
+                "currentHeight": 36,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -7904,7 +7904,491 @@
         {
             "state": {
                 "start": 109,
-                "end": 109,
+                "end": 110,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "20bfe095-5e4b-4ae9-c5e6-874383c701f2"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 12
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 12,
+                            "length": 1
+                        },
+                        "contentStart": 11,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
+                    "resultId": "20bfe095-5e4b-4ae9-c5e6-874383c701f2",
+                    "rows": [
+                        {
+                            "0": "carservicerecords"
+                        },
+                        {
+                            "0": "customerusage"
+                        },
+                        {
+                            "0": "employee"
+                        },
+                        {
+                            "0": "finance_customers"
+                        },
+                        {
+                            "0": "flightbookings"
+                        },
+                        {
+                            "0": "info"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Tables_in_test",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 176.895ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "show tables",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 111,
+                "end": 111,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "e524a4eb-6530-4dd8-f9a3-76ca1e69ed90"
+                    ]
+                },
+                "currentHeight": 217,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 29
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
+                    "resultId": "e524a4eb-6530-4dd8-f9a3-76ca1e69ed90",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Karthik Prathik",
+                            "2": "Economy",
+                            "3": 4500,
+                            "4": 500,
+                            "5": "Y"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Vinay",
+                            "2": "Business",
+                            "3": 15000,
+                            "4": 1200,
+                            "5": "Y"
+                        },
+                        {
+                            "0": 3,
+                            "1": "Vijay",
+                            "2": "Economy",
+                            "3": 4800,
+                            "4": 700,
+                            "5": "N"
+                        },
+                        {
+                            "0": 4,
+                            "1": "Veer",
+                            "2": "First Class",
+                            "3": 25000,
+                            "4": 2000,
+                            "5": "Y"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Veena",
+                            "2": "Economy",
+                            "3": 5200,
+                            "4": 800,
+                            "5": "N"
+                        },
+                        {
+                            "0": 6,
+                            "1": "Meena",
+                            "2": "Business",
+                            "3": 14000,
+                            "4": 1100,
+                            "5": "Y"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "booking_id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "passenger_name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "flight_class",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "ticket_price",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "distance_km",
+                            "field": "4",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "frequent_flyer",
+                            "field": "5",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 29.181ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select * from flightbookings",
+                    "updatable": true,
+                    "fullTableName": "flightbookings"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 112,
+                "end": 121,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "fafd72a6-4924-45bc-cc32-231b5dc81d72"
+                    ]
+                },
+                "currentHeight": 217,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 315
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
+                    "resultId": "fafd72a6-4924-45bc-cc32-231b5dc81d72",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Karthik Prathik",
+                            "2": "Economy",
+                            "3": 500,
+                            "4": "Others"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Vinay",
+                            "2": "Business",
+                            "3": 1200,
+                            "4": "Others"
+                        },
+                        {
+                            "0": 3,
+                            "1": "Vijay",
+                            "2": "Economy",
+                            "3": 700,
+                            "4": "Others"
+                        },
+                        {
+                            "0": 4,
+                            "1": "Veer",
+                            "2": "First Class",
+                            "3": 2000,
+                            "4": "Long Haul Economy"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Veena",
+                            "2": "Economy",
+                            "3": 800,
+                            "4": "Others"
+                        },
+                        {
+                            "0": 6,
+                            "1": "Meena",
+                            "2": "Business",
+                            "3": 1100,
+                            "4": "Others"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "booking_id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "passenger_name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "flight_class",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "distance_km",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "status",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 377.092ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select booking_id, passenger_name, flight_class, distance_km,\n    case\n        when distance_km > 1500 then\n            case\n                when flight_class = \"Business\" then \"Long Haul Business\"\n                else \"Long Haul Economy\"\n            end\n        else \"Others\"\n    end as status\nfrom flightbookings",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 122,
+                "end": 122,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
