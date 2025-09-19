@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\nshow databases;\n\nuse test;\nclear\nclean;\nshow tables;\n\nshow tables;\nselect * from finance_customers;\nselect customer_id, customer_name, last_transaction_days, balance,\ncase\n    when last_transaction_days < 30 then\n        case\n            when balance > 50000 then \"High Active\"\n            else \"Low Active\"\n        end\n    else \"Not Active\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, credit_score, income,\ncase\n    when credit_score > 700 then\n        case\n            when income > 75000 then \"Approved High Income\"\n            else \"Approved Low Income\"\n        end\n    else \"Not Approved\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, overdraft_amount, overdraft_used,\ncase\n    when overdraft_used = \"Yes\" then\n    case\n        when overdraft_amount > 5000 then \"High Overdraft\"\n        else \"Low Overdraft\"\n    end\n    else \"No Overdraft\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, investment_duration, return_rate,\n    case\n        when investment_duration > 5 then\n            case\n                when return_rate > 8 then \"High Returns\"\n                else \"Moderate Returns\"\n            end\n        else \"Short Term\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, transaction_amount, transaction_type,\n    case\n        when transaction_amount > 10000 then\n            case\n                when transaction_type = \"Transfer\" then \"Large Transfer\"\n                else \"Large Other\"\n            end\n        else \"Low Other\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, age, account_balance,\n    case\n        when age > 65 then\n            case\n                when account_balance < 1000 then \"At Risk Senior\"\n                else \"Senior Stable\"\n            end\n        else \"Not a Senior\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, card_type, usage_frequency,\n    case\n        when card_type = \"Platinum\" then\n            case\n                when usage_frequency > 20 then \"Heavy User Platinum\"\n                else \"Light User Platinum\"\n            end\n        else \"Non Platinum\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, repayment_status, delay_days,\n    case\n        when repayment_status = \"Delayed\" then\n            case\n                when delay_days > 30 then \"Long Delay\"\n                else \"Short Delay\"\n            end\n        else \"On Time\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, account_type, avg_monthly_balance,\n    case\n        when account_type = \"Savings\" then\n            case\n                when avg_monthly_balance > 10000 then \"Waived\"\n                else \"Not Waived\"\n            end\n        else \"Checking\"\n    end as status\nfrom finance_customers;\nshow tables;\n\nselect * from flightbookings;\nselect booking_id, passenger_name, flight_class, distance_km,\n    case\n        when distance_km > 1500 then\n            case\n                when flight_class = \"Business\" then \"Long Haul Business\"\n                else \"Long Haul Economy\"\n            end\n        else \"Others\"\n    end as status\nfrom flightbookings;\nINSERT INTO CustomerUsageNew VALUES\n(1, 'Veena', 'Postpaid', 9, 471, 842.03),\n(2, 'Veer', 'Postpaid', 7, 354, 434.94),\n(3, 'Mohan', 'Prepaid', 33, 497, 569.23),\n(4, 'Pratik', 'Prepaid', 15, 113, 1107.48),\n(5, 'Farhan', 'Prepaid', 14, 1284, 845.75),\n(6, 'Jiya', 'Postpaid', 28, 1578, 1325.15);\nuse test;\nselect * from customerusagenew;\nselect customer_id, customer_name, plan_type, data_used_gb, call_minutes, monthly_bill,\n    case\n        when plan_type = \"Prepaid\" then\n            case\n                when monthly_bill > 400 OR call_minutes > 550 then \"Suggest Postpaid Upgrade\"\n                else \"No Upgrade\"\n            end\n        when plan_type = \"Postpaid\" then\n            case\n                when data_used_gb > 25 then \"Suggest Premium Plan\"\n                else \"Satisfactory Usage\"\n            end\n    end as status\nfrom customerusagenew;\n",
+    "content": "\\about\nshow databases;\n\nuse test;\nclear\nclean;\nshow tables;\n\nshow tables;\nselect * from finance_customers;\nselect customer_id, customer_name, last_transaction_days, balance,\ncase\n    when last_transaction_days < 30 then\n        case\n            when balance > 50000 then \"High Active\"\n            else \"Low Active\"\n        end\n    else \"Not Active\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, credit_score, income,\ncase\n    when credit_score > 700 then\n        case\n            when income > 75000 then \"Approved High Income\"\n            else \"Approved Low Income\"\n        end\n    else \"Not Approved\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, overdraft_amount, overdraft_used,\ncase\n    when overdraft_used = \"Yes\" then\n    case\n        when overdraft_amount > 5000 then \"High Overdraft\"\n        else \"Low Overdraft\"\n    end\n    else \"No Overdraft\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, investment_duration, return_rate,\n    case\n        when investment_duration > 5 then\n            case\n                when return_rate > 8 then \"High Returns\"\n                else \"Moderate Returns\"\n            end\n        else \"Short Term\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, transaction_amount, transaction_type,\n    case\n        when transaction_amount > 10000 then\n            case\n                when transaction_type = \"Transfer\" then \"Large Transfer\"\n                else \"Large Other\"\n            end\n        else \"Low Other\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, age, account_balance,\n    case\n        when age > 65 then\n            case\n                when account_balance < 1000 then \"At Risk Senior\"\n                else \"Senior Stable\"\n            end\n        else \"Not a Senior\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, card_type, usage_frequency,\n    case\n        when card_type = \"Platinum\" then\n            case\n                when usage_frequency > 20 then \"Heavy User Platinum\"\n                else \"Light User Platinum\"\n            end\n        else \"Non Platinum\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, repayment_status, delay_days,\n    case\n        when repayment_status = \"Delayed\" then\n            case\n                when delay_days > 30 then \"Long Delay\"\n                else \"Short Delay\"\n            end\n        else \"On Time\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, account_type, avg_monthly_balance,\n    case\n        when account_type = \"Savings\" then\n            case\n                when avg_monthly_balance > 10000 then \"Waived\"\n                else \"Not Waived\"\n            end\n        else \"Checking\"\n    end as status\nfrom finance_customers;\nshow tables;\n\nselect * from flightbookings;\nselect booking_id, passenger_name, flight_class, distance_km,\n    case\n        when distance_km > 1500 then\n            case\n                when flight_class = \"Business\" then \"Long Haul Business\"\n                else \"Long Haul Economy\"\n            end\n        else \"Others\"\n    end as status\nfrom flightbookings;\nINSERT INTO CustomerUsageNew VALUES\n(1, 'Veena', 'Postpaid', 9, 471, 842.03),\n(2, 'Veer', 'Postpaid', 7, 354, 434.94),\n(3, 'Mohan', 'Prepaid', 33, 497, 569.23),\n(4, 'Pratik', 'Prepaid', 15, 113, 1107.48),\n(5, 'Farhan', 'Prepaid', 14, 1284, 845.75),\n(6, 'Jiya', 'Postpaid', 28, 1578, 1325.15);\nuse test;\nselect * from customerusagenew;\nselect customer_id, customer_name, plan_type, data_used_gb, call_minutes, monthly_bill,\n    case\n        when plan_type = \"Prepaid\" then\n            case\n                when monthly_bill > 400 OR call_minutes > 550 then \"Suggest Postpaid Upgrade\"\n                else \"No Upgrade\"\n            end\n        when plan_type = \"Postpaid\" then\n            case\n                when data_used_gb > 25 then \"Suggest Premium Plan\"\n                else \"Satisfactory Usage\"\n            end\n    end as status\nfrom customerusagenew;\nselect customer_id, customer_name, plan_type, data_used_gb,\n    case\n        when plan_type = \"Postpaid\" then\n            case\n                when data_used_gb >= 30 then \"Heavy User - Postpaid\"\n                when data_used_gb BETWEEN 15 AND 29 then \"Moderate User - Postpaid\"\n                else \"Light User - Postpaid\"\n            end\n        when plan_type = \"Prepaid\" then\n            case\n                when data_used_gb >= 20 then \"Heavy User - Prepaid\"\n                else \"Light User - Prepaid\"\n            end\n    end as status\nfrom customerusagenew;\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,22 +15,22 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 140,
-                    "column": 67
+                    "lineNumber": 160,
+                    "column": 1
                 },
                 "position": {
-                    "lineNumber": 140,
-                    "column": 67
+                    "lineNumber": 160,
+                    "column": 1
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 131,
+                "lineNumber": 145,
                 "column": 1
             },
-            "firstPositionDeltaTop": 63
+            "firstPositionDeltaTop": -23
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -8460,7 +8460,7 @@
                         "52c7b276-f13f-4dc3-8dab-2594b59d1107"
                     ]
                 },
-                "currentHeight": 217,
+                "currentHeight": 36,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -8677,7 +8677,7 @@
                         "a9cb7b14-f132-480d-fc2f-438888ac6ca9"
                     ]
                 },
-                "currentHeight": 217,
+                "currentHeight": 36,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -8904,7 +8904,188 @@
         {
             "state": {
                 "start": 145,
-                "end": 145,
+                "end": 159,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "94565190-9b14-4a31-ab60-22702870b72a"
+                    ]
+                },
+                "currentHeight": 217,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 566
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "94565190-9b14-4a31-ab60-22702870b72a",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Veena",
+                            "2": "Postpaid",
+                            "3": 9,
+                            "4": "Light User - Postpaid"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Veer",
+                            "2": "Postpaid",
+                            "3": 7,
+                            "4": "Light User - Postpaid"
+                        },
+                        {
+                            "0": 3,
+                            "1": "Mohan",
+                            "2": "Prepaid",
+                            "3": 33,
+                            "4": "Heavy User - Prepaid"
+                        },
+                        {
+                            "0": 4,
+                            "1": "Pratik",
+                            "2": "Prepaid",
+                            "3": 15,
+                            "4": "Light User - Prepaid"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Farhan",
+                            "2": "Prepaid",
+                            "3": 14,
+                            "4": "Light User - Prepaid"
+                        },
+                        {
+                            "0": 6,
+                            "1": "Jiya",
+                            "2": "Postpaid",
+                            "3": 28,
+                            "4": "Moderate User - Postpaid"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "customer_id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "customer_name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "plan_type",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "data_used_gb",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "status",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 2.1880152225494385s"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select customer_id, customer_name, plan_type, data_used_gb,\n    case\n        when plan_type = \"Postpaid\" then\n            case\n                when data_used_gb >= 30 then \"Heavy User - Postpaid\"\n                when data_used_gb BETWEEN 15 AND 29 then \"Moderate User - Postpaid\"\n                else \"Light User - Postpaid\"\n            end\n        when plan_type = \"Prepaid\" then\n            case\n                when data_used_gb >= 20 then \"Heavy User - Prepaid\"\n                else \"Light User - Prepaid\"\n            end\n    end as status\nfrom customerusagenew",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 160,
+                "end": 160,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
