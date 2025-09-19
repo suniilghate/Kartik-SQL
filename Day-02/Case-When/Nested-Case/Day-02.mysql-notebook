@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\nshow databases;\n\nuse test;\nclear\nclean;\nshow tables;\n\nshow tables;\nselect * from finance_customers;\nselect customer_id, customer_name, last_transaction_days, balance,\ncase\n    when last_transaction_days < 30 then\n        case\n            when balance > 50000 then \"High Active\"\n            else \"Low Active\"\n        end\n    else \"Not Active\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, credit_score, income,\ncase\n    when credit_score > 700 then\n        case\n            when income > 75000 then \"Approved High Income\"\n            else \"Approved Low Income\"\n        end\n    else \"Not Approved\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, overdraft_amount, overdraft_used,\ncase\n    when overdraft_used = \"Yes\" then\n    case\n        when overdraft_amount > 5000 then \"High Overdraft\"\n        else \"Low Overdraft\"\n    end\n    else \"No Overdraft\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, investment_duration, return_rate,\n    case\n        when investment_duration > 5 then\n            case\n                when return_rate > 8 then \"High Returns\"\n                else \"Moderate Returns\"\n            end\n        else \"Short Term\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, transaction_amount, transaction_type,\n    case\n        when transaction_amount > 10000 then\n            case\n                when transaction_type = \"Transfer\" then \"Large Transfer\"\n                else \"Large Other\"\n            end\n        else \"Low Other\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, age, account_balance,\n    case\n        when age > 65 then\n            case\n                when account_balance < 1000 then \"At Risk Senior\"\n                else \"Senior Stable\"\n            end\n        else \"Not a Senior\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, card_type, usage_frequency,\n    case\n        when card_type = \"Platinum\" then\n            case\n                when usage_frequency > 20 then \"Heavy User Platinum\"\n                else \"Light User Platinum\"\n            end\n        else \"Non Platinum\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, repayment_status, delay_days,\n    case\n        when repayment_status = \"Delayed\" then\n            case\n                when delay_days > 30 then \"Long Delay\"\n                else \"Short Delay\"\n            end\n        else \"On Time\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, account_type, avg_monthly_balance,\n    case\n        when account_type = \"Savings\" then\n            case\n                when avg_monthly_balance > 10000 then \"Waived\"\n                else \"Not Waived\"\n            end\n        else \"Checking\"\n    end as status\nfrom finance_customers;\nshow tables;\n\nselect * from flightbookings;\nselect booking_id, passenger_name, flight_class, distance_km,\n    case\n        when distance_km > 1500 then\n            case\n                when flight_class = \"Business\" then \"Long Haul Business\"\n                else \"Long Haul Economy\"\n            end\n        else \"Others\"\n    end as status\nfrom flightbookings;\n",
+    "content": "\\about\nshow databases;\n\nuse test;\nclear\nclean;\nshow tables;\n\nshow tables;\nselect * from finance_customers;\nselect customer_id, customer_name, last_transaction_days, balance,\ncase\n    when last_transaction_days < 30 then\n        case\n            when balance > 50000 then \"High Active\"\n            else \"Low Active\"\n        end\n    else \"Not Active\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, credit_score, income,\ncase\n    when credit_score > 700 then\n        case\n            when income > 75000 then \"Approved High Income\"\n            else \"Approved Low Income\"\n        end\n    else \"Not Approved\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, overdraft_amount, overdraft_used,\ncase\n    when overdraft_used = \"Yes\" then\n    case\n        when overdraft_amount > 5000 then \"High Overdraft\"\n        else \"Low Overdraft\"\n    end\n    else \"No Overdraft\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, investment_duration, return_rate,\n    case\n        when investment_duration > 5 then\n            case\n                when return_rate > 8 then \"High Returns\"\n                else \"Moderate Returns\"\n            end\n        else \"Short Term\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, transaction_amount, transaction_type,\n    case\n        when transaction_amount > 10000 then\n            case\n                when transaction_type = \"Transfer\" then \"Large Transfer\"\n                else \"Large Other\"\n            end\n        else \"Low Other\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, age, account_balance,\n    case\n        when age > 65 then\n            case\n                when account_balance < 1000 then \"At Risk Senior\"\n                else \"Senior Stable\"\n            end\n        else \"Not a Senior\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, card_type, usage_frequency,\n    case\n        when card_type = \"Platinum\" then\n            case\n                when usage_frequency > 20 then \"Heavy User Platinum\"\n                else \"Light User Platinum\"\n            end\n        else \"Non Platinum\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, repayment_status, delay_days,\n    case\n        when repayment_status = \"Delayed\" then\n            case\n                when delay_days > 30 then \"Long Delay\"\n                else \"Short Delay\"\n            end\n        else \"On Time\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, account_type, avg_monthly_balance,\n    case\n        when account_type = \"Savings\" then\n            case\n                when avg_monthly_balance > 10000 then \"Waived\"\n                else \"Not Waived\"\n            end\n        else \"Checking\"\n    end as status\nfrom finance_customers;\nshow tables;\n\nselect * from flightbookings;\nselect booking_id, passenger_name, flight_class, distance_km,\n    case\n        when distance_km > 1500 then\n            case\n                when flight_class = \"Business\" then \"Long Haul Business\"\n                else \"Long Haul Economy\"\n            end\n        else \"Others\"\n    end as status\nfrom flightbookings;\nINSERT INTO CustomerUsageNew VALUES\n(1, 'Veena', 'Postpaid', 9, 471, 842.03),\n(2, 'Veer', 'Postpaid', 7, 354, 434.94),\n(3, 'Mohan', 'Prepaid', 33, 497, 569.23),\n(4, 'Pratik', 'Prepaid', 15, 113, 1107.48),\n(5, 'Farhan', 'Prepaid', 14, 1284, 845.75),\n(6, 'Jiya', 'Postpaid', 28, 1578, 1325.15);\nuse test;\nselect * from customerusagenew;\nselect customer_id, customer_name, plan_type, data_used_gb, call_minutes, monthly_bill,\n    case\n        when plan_type = \"Prepaid\" then\n            case\n                when monthly_bill > 400 OR call_minutes > 550 then \"Suggest Postpaid Upgrade\"\n                else \"No Upgrade\"\n            end\n        when plan_type = \"Postpaid\" then\n            case\n                when data_used_gb > 25 then \"Suggest Premium Plan\"\n                else \"Satisfactory Usage\"\n            end\n    end as status\nfrom customerusagenew;\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,26 +15,26 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 120,
-                    "column": 18
+                    "lineNumber": 140,
+                    "column": 67
                 },
                 "position": {
-                    "lineNumber": 120,
-                    "column": 18
+                    "lineNumber": 140,
+                    "column": 67
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 112,
+                "lineNumber": 131,
                 "column": 1
             },
-            "firstPositionDeltaTop": 119
+            "firstPositionDeltaTop": 63
         },
         "contributionsState": {
             "editor.contrib.folding": {},
-            "editor.contrib.wordHighlighter": true
+            "editor.contrib.wordHighlighter": false
         }
     },
     "contexts": [
@@ -77,7 +77,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "06f20d78-314c-4d11-f47e-5733e32efb6f"
+                        "1fccc5ff-bd90-4117-a0b0-b58b87527fd1"
                     ]
                 },
                 "currentHeight": 36,
@@ -105,8 +105,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "06f20d78-314c-4d11-f47e-5733e32efb6f",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "1fccc5ff-bd90-4117-a0b0-b58b87527fd1",
                     "rows": [
                         {
                             "0": "demolara"
@@ -264,7 +264,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "acbded82-f493-4c93-dba9-63189f55c99f"
+                        "87cba929-053b-43de-d5e6-d3ab160c391c"
                     ]
                 },
                 "currentHeight": 36,
@@ -283,8 +283,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "acbded82-f493-4c93-dba9-63189f55c99f",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "87cba929-053b-43de-d5e6-d3ab160c391c",
                     "rows": [
                         {
                             "0": "carservicerecords"
@@ -345,7 +345,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "4cba0392-bde3-4683-b4b7-8d6e7d2c16c9"
+                        "04df9984-4cbd-4e61-c5a7-27d627c3725e"
                     ]
                 },
                 "currentHeight": 36,
@@ -373,8 +373,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "4cba0392-bde3-4683-b4b7-8d6e7d2c16c9",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "04df9984-4cbd-4e61-c5a7-27d627c3725e",
                     "rows": [
                         {
                             "0": 1,
@@ -1003,7 +1003,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "43b4b053-4908-4b43-ed89-57df85dbe1e1"
+                        "9369a0b8-1472-426e-e6f0-5e3609ef4365"
                     ]
                 },
                 "currentHeight": 36,
@@ -1022,8 +1022,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "43b4b053-4908-4b43-ed89-57df85dbe1e1",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "9369a0b8-1472-426e-e6f0-5e3609ef4365",
                     "rows": [
                         {
                             "0": 1,
@@ -1195,7 +1195,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "b6c1fb2e-9991-4eb4-e4fe-4c5e483fdf54"
+                        "d1a25260-217e-4d97-fdc8-aa7216588e0a"
                     ]
                 },
                 "currentHeight": 36,
@@ -1214,8 +1214,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "b6c1fb2e-9991-4eb4-e4fe-4c5e483fdf54",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "d1a25260-217e-4d97-fdc8-aa7216588e0a",
                     "rows": [
                         {
                             "0": 1,
@@ -1844,7 +1844,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "c62ea1ed-486f-4c88-ce4d-057a8c86b775"
+                        "7db3b168-5eaa-4d21-b6e8-d249854d3921"
                     ]
                 },
                 "currentHeight": 36,
@@ -1863,8 +1863,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "c62ea1ed-486f-4c88-ce4d-057a8c86b775",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "7db3b168-5eaa-4d21-b6e8-d249854d3921",
                     "rows": [
                         {
                             "0": 1,
@@ -2036,7 +2036,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "94c455c0-1d9f-4631-de6d-3552af83e389"
+                        "7ba237d8-b00a-4c09-a544-1a310666f7f9"
                     ]
                 },
                 "currentHeight": 36,
@@ -2055,8 +2055,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "94c455c0-1d9f-4631-de6d-3552af83e389",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "7ba237d8-b00a-4c09-a544-1a310666f7f9",
                     "rows": [
                         {
                             "0": 1,
@@ -2685,7 +2685,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "11fedf1c-3371-4cf1-b6fa-46c0c2667db8"
+                        "e575d825-063d-433f-f17a-dc5745456afe"
                     ]
                 },
                 "currentHeight": 36,
@@ -2704,8 +2704,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "11fedf1c-3371-4cf1-b6fa-46c0c2667db8",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "e575d825-063d-433f-f17a-dc5745456afe",
                     "rows": [
                         {
                             "0": 1,
@@ -2875,7 +2875,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "8d15cb2d-ce0e-4ab1-cf2a-d6403398953c"
+                        "9de3d594-c40d-44bc-ed69-8d9526e32d55"
                     ]
                 },
                 "currentHeight": 36,
@@ -2894,8 +2894,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "8d15cb2d-ce0e-4ab1-cf2a-d6403398953c",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "9de3d594-c40d-44bc-ed69-8d9526e32d55",
                     "rows": [
                         {
                             "0": 1,
@@ -3524,7 +3524,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "eb907058-48fb-465f-e1a8-3bd3b379d329"
+                        "cf5aad0f-b0fc-4b81-8bca-45a585114588"
                     ]
                 },
                 "currentHeight": 36,
@@ -3543,8 +3543,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "eb907058-48fb-465f-e1a8-3bd3b379d329",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "cf5aad0f-b0fc-4b81-8bca-45a585114588",
                     "rows": [
                         {
                             "0": 1,
@@ -3716,7 +3716,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "c4e324bc-151c-4eda-b774-f00cf01471ad"
+                        "e4eb9013-7146-453b-8990-e411a5e5bedb"
                     ]
                 },
                 "currentHeight": 36,
@@ -3735,8 +3735,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "c4e324bc-151c-4eda-b774-f00cf01471ad",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "e4eb9013-7146-453b-8990-e411a5e5bedb",
                     "rows": [
                         {
                             "0": 1,
@@ -4365,7 +4365,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "51eef3de-3b50-4b6e-d213-7d74b58a9ce8"
+                        "3b9ba77c-5fd2-4528-fe64-82858190f181"
                     ]
                 },
                 "currentHeight": 36,
@@ -4384,8 +4384,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "51eef3de-3b50-4b6e-d213-7d74b58a9ce8",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "3b9ba77c-5fd2-4528-fe64-82858190f181",
                     "rows": [
                         {
                             "0": 1,
@@ -4555,7 +4555,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "f2c1b3b1-1c4d-4799-e9de-d5e2bee6d120"
+                        "68075e6d-240f-489f-984a-36ec9c797a7d"
                     ]
                 },
                 "currentHeight": 36,
@@ -4574,8 +4574,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "f2c1b3b1-1c4d-4799-e9de-d5e2bee6d120",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "68075e6d-240f-489f-984a-36ec9c797a7d",
                     "rows": [
                         {
                             "0": 1,
@@ -5204,7 +5204,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "51db79f8-8ac1-46e2-a662-473bae7fbc33"
+                        "01f36c3f-29b3-4732-faa2-adf79ff2baa6"
                     ]
                 },
                 "currentHeight": 36,
@@ -5223,8 +5223,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "51db79f8-8ac1-46e2-a662-473bae7fbc33",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "01f36c3f-29b3-4732-faa2-adf79ff2baa6",
                     "rows": [
                         {
                             "0": 1,
@@ -5396,7 +5396,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "7460c29e-5f7b-4d3e-d17b-7a26096a9ba1"
+                        "da0b4f09-0435-4cbc-901b-cd43a3b59b27"
                     ]
                 },
                 "currentHeight": 36,
@@ -5415,8 +5415,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "7460c29e-5f7b-4d3e-d17b-7a26096a9ba1",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "da0b4f09-0435-4cbc-901b-cd43a3b59b27",
                     "rows": [
                         {
                             "0": 1,
@@ -6045,7 +6045,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "2d672b20-4cd8-4300-e050-515c6caa40e2"
+                        "99eaeace-08ea-4a56-b950-caa3c3772e73"
                     ]
                 },
                 "currentHeight": 36,
@@ -6064,8 +6064,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "2d672b20-4cd8-4300-e050-515c6caa40e2",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "99eaeace-08ea-4a56-b950-caa3c3772e73",
                     "rows": [
                         {
                             "0": 1,
@@ -6233,7 +6233,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "44741ad3-e09c-4d09-f668-d644ac655fcd"
+                        "da8df572-52be-4fec-8f1f-6d0d85e0d30c"
                     ]
                 },
                 "currentHeight": 36,
@@ -6252,8 +6252,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "44741ad3-e09c-4d09-f668-d644ac655fcd",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "da8df572-52be-4fec-8f1f-6d0d85e0d30c",
                     "rows": [
                         {
                             "0": 1,
@@ -6882,7 +6882,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "c0ecd6ca-2dc6-4809-b526-5781c9b24103"
+                        "e8d5fe28-15d6-403f-8b29-3c3a04663da6"
                     ]
                 },
                 "currentHeight": 36,
@@ -6901,8 +6901,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "c0ecd6ca-2dc6-4809-b526-5781c9b24103",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "e8d5fe28-15d6-403f-8b29-3c3a04663da6",
                     "rows": [
                         {
                             "0": 1,
@@ -7070,7 +7070,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "befc5748-8817-4e79-c283-b20f87aa9683"
+                        "691ffc51-80e6-447a-fa5d-f4f3b2bdd1d7"
                     ]
                 },
                 "currentHeight": 36,
@@ -7089,8 +7089,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "befc5748-8817-4e79-c283-b20f87aa9683",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "691ffc51-80e6-447a-fa5d-f4f3b2bdd1d7",
                     "rows": [
                         {
                             "0": 1,
@@ -7719,7 +7719,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "a6ba7ab0-ded2-4969-92c7-536947b5aa32"
+                        "7b8a4879-f508-4f12-ce1c-3b7441945bd0"
                     ]
                 },
                 "currentHeight": 36,
@@ -7738,8 +7738,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "a6ba7ab0-ded2-4969-92c7-536947b5aa32",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "7b8a4879-f508-4f12-ce1c-3b7441945bd0",
                     "rows": [
                         {
                             "0": 1,
@@ -7909,7 +7909,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "20bfe095-5e4b-4ae9-c5e6-874383c701f2"
+                        "cabf86c4-be4f-43c1-bad1-4f21e4b3e23d"
                     ]
                 },
                 "currentHeight": 36,
@@ -7937,8 +7937,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "20bfe095-5e4b-4ae9-c5e6-874383c701f2",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "cabf86c4-be4f-43c1-bad1-4f21e4b3e23d",
                     "rows": [
                         {
                             "0": "carservicerecords"
@@ -7999,7 +7999,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "e524a4eb-6530-4dd8-f9a3-76ca1e69ed90"
+                        "68c36de6-bb8f-4ff6-c8dd-744bf3316f1b"
                     ]
                 },
                 "currentHeight": 217,
@@ -8018,8 +8018,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "e524a4eb-6530-4dd8-f9a3-76ca1e69ed90",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "68c36de6-bb8f-4ff6-c8dd-744bf3316f1b",
                     "rows": [
                         {
                             "0": 1,
@@ -8212,7 +8212,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "fafd72a6-4924-45bc-cc32-231b5dc81d72"
+                        "83f5d72b-01b2-4bcf-97c3-ebc80ae964a5"
                     ]
                 },
                 "currentHeight": 217,
@@ -8231,8 +8231,8 @@
             },
             "data": [
                 {
-                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
-                    "resultId": "fafd72a6-4924-45bc-cc32-231b5dc81d72",
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "83f5d72b-01b2-4bcf-97c3-ebc80ae964a5",
                     "rows": [
                         {
                             "0": 1,
@@ -8388,7 +8388,523 @@
         {
             "state": {
                 "start": 122,
-                "end": 122,
+                "end": 128,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "baea7f80-6f2e-4362-d1fc-0c3bc9badef6",
+                            "content": "OK, 6 rows affected in 2.533609628677368s"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 292
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 129,
+                "end": 129,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "48058df0-3594-4835-a213-280a27599a67",
+                            "content": "OK, 0 records retrieved in 1.328ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 9
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 130,
+                "end": 130,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "52c7b276-f13f-4dc3-8dab-2594b59d1107"
+                    ]
+                },
+                "currentHeight": 217,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 31
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "52c7b276-f13f-4dc3-8dab-2594b59d1107",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Veena",
+                            "2": "Postpaid",
+                            "3": 9,
+                            "4": 471,
+                            "5": "842.03"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Veer",
+                            "2": "Postpaid",
+                            "3": 7,
+                            "4": 354,
+                            "5": "434.94"
+                        },
+                        {
+                            "0": 3,
+                            "1": "Mohan",
+                            "2": "Prepaid",
+                            "3": 33,
+                            "4": 497,
+                            "5": "569.23"
+                        },
+                        {
+                            "0": 4,
+                            "1": "Pratik",
+                            "2": "Prepaid",
+                            "3": 15,
+                            "4": 113,
+                            "5": "1107.48"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Farhan",
+                            "2": "Prepaid",
+                            "3": 14,
+                            "4": 1284,
+                            "5": "845.75"
+                        },
+                        {
+                            "0": 6,
+                            "1": "Jiya",
+                            "2": "Postpaid",
+                            "3": 28,
+                            "4": 1578,
+                            "5": "1325.15"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "customer_id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "customer_name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "plan_type",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "data_used_gb",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "call_minutes",
+                            "field": "4",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "monthly_bill",
+                            "field": "5",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 1.135ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select * from customerusagenew",
+                    "updatable": true,
+                    "fullTableName": "customerusagenew"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 131,
+                "end": 144,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "a9cb7b14-f132-480d-fc2f-438888ac6ca9"
+                    ]
+                },
+                "currentHeight": 217,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 521
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "3a40faf3-92a7-454e-b53f-5e338ae67e8e",
+                    "resultId": "a9cb7b14-f132-480d-fc2f-438888ac6ca9",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Veena",
+                            "2": "Postpaid",
+                            "3": 9,
+                            "4": 471,
+                            "5": "842.03",
+                            "6": "Satisfactory Usage"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Veer",
+                            "2": "Postpaid",
+                            "3": 7,
+                            "4": 354,
+                            "5": "434.94",
+                            "6": "Satisfactory Usage"
+                        },
+                        {
+                            "0": 3,
+                            "1": "Mohan",
+                            "2": "Prepaid",
+                            "3": 33,
+                            "4": 497,
+                            "5": "569.23",
+                            "6": "Suggest Postpaid Upgrade"
+                        },
+                        {
+                            "0": 4,
+                            "1": "Pratik",
+                            "2": "Prepaid",
+                            "3": 15,
+                            "4": 113,
+                            "5": "1107.48",
+                            "6": "Suggest Postpaid Upgrade"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Farhan",
+                            "2": "Prepaid",
+                            "3": 14,
+                            "4": 1284,
+                            "5": "845.75",
+                            "6": "Suggest Postpaid Upgrade"
+                        },
+                        {
+                            "0": 6,
+                            "1": "Jiya",
+                            "2": "Postpaid",
+                            "3": 28,
+                            "4": 1578,
+                            "5": "1325.15",
+                            "6": "Suggest Premium Plan"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "customer_id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "customer_name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "plan_type",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "data_used_gb",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "call_minutes",
+                            "field": "4",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "monthly_bill",
+                            "field": "5",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "status",
+                            "field": "6",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 2.2046546936035156s"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select customer_id, customer_name, plan_type, data_used_gb, call_minutes, monthly_bill,\n    case\n        when plan_type = \"Prepaid\" then\n            case\n                when monthly_bill > 400 OR call_minutes > 550 then \"Suggest Postpaid Upgrade\"\n                else \"No Upgrade\"\n            end\n        when plan_type = \"Postpaid\" then\n            case\n                when data_used_gb > 25 then \"Suggest Premium Plan\"\n                else \"Satisfactory Usage\"\n            end\n    end as status\nfrom customerusagenew",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 145,
+                "end": 145,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
