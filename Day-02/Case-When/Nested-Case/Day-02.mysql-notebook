@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\nshow databases;\n\nuse test;\nclear\nclean;\nshow tables;\n\nshow tables;\nselect * from finance_customers;\nselect customer_id, customer_name, last_transaction_days, balance,\ncase\n    when last_transaction_days < 30 then\n        case\n            when balance > 50000 then \"High Active\"\n            else \"Low Active\"\n        end\n    else \"Not Active\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, credit_score, income,\ncase\n    when credit_score > 700 then\n        case\n            when income > 75000 then \"Approved High Income\"\n            else \"Approved Low Income\"\n        end\n    else \"Not Approved\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, overdraft_amount, overdraft_used,\ncase\n    when overdraft_used = \"Yes\" then\n    case\n        when overdraft_amount > 5000 then \"High Overdraft\"\n        else \"Low Overdraft\"\n    end\n    else \"No Overdraft\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, investment_duration, return_rate,\n    case\n        when investment_duration > 5 then\n            case\n                when return_rate > 8 then \"High Returns\"\n                else \"Moderate Returns\"\n            end\n        else \"Short Term\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, transaction_amount, transaction_type,\n    case\n        when transaction_amount > 10000 then\n            case\n                when transaction_type = \"Transfer\" then \"Large Transfer\"\n                else \"Large Other\"\n            end\n        else \"Low Other\"\n    end as status\nfrom finance_customers;\n",
+    "content": "\\about\nshow databases;\n\nuse test;\nclear\nclean;\nshow tables;\n\nshow tables;\nselect * from finance_customers;\nselect customer_id, customer_name, last_transaction_days, balance,\ncase\n    when last_transaction_days < 30 then\n        case\n            when balance > 50000 then \"High Active\"\n            else \"Low Active\"\n        end\n    else \"Not Active\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, credit_score, income,\ncase\n    when credit_score > 700 then\n        case\n            when income > 75000 then \"Approved High Income\"\n            else \"Approved Low Income\"\n        end\n    else \"Not Approved\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, overdraft_amount, overdraft_used,\ncase\n    when overdraft_used = \"Yes\" then\n    case\n        when overdraft_amount > 5000 then \"High Overdraft\"\n        else \"Low Overdraft\"\n    end\n    else \"No Overdraft\"\nend as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, investment_duration, return_rate,\n    case\n        when investment_duration > 5 then\n            case\n                when return_rate > 8 then \"High Returns\"\n                else \"Moderate Returns\"\n            end\n        else \"Short Term\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, transaction_amount, transaction_type,\n    case\n        when transaction_amount > 10000 then\n            case\n                when transaction_type = \"Transfer\" then \"Large Transfer\"\n                else \"Large Other\"\n            end\n        else \"Low Other\"\n    end as status\nfrom finance_customers;\nselect * from finance_customers;\nselect customer_id, customer_name, age, account_balance,\n    case\n        when age > 65 then\n            case\n                when account_balance < 1000 then \"At Risk Senior\"\n                else \"Senior Stable\"\n            end\n        else \"Not a Senior\"\n    end as status\nfrom finance_customers;\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -13,13 +13,13 @@
     "viewState": {
         "cursorState": [
             {
-                "inSelectionMode": true,
+                "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 64,
-                    "column": 24
+                    "lineNumber": 76,
+                    "column": 1
                 },
                 "position": {
-                    "lineNumber": 55,
+                    "lineNumber": 76,
                     "column": 1
                 }
             }
@@ -27,10 +27,10 @@
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 55,
+                "lineNumber": 66,
                 "column": 1
             },
-            "firstPositionDeltaTop": 79
+            "firstPositionDeltaTop": 94
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -3719,7 +3719,7 @@
                         "c4e324bc-151c-4eda-b774-f00cf01471ad"
                     ]
                 },
-                "currentHeight": 295,
+                "currentHeight": 36,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -4368,7 +4368,7 @@
                         "51eef3de-3b50-4b6e-d213-7d74b58a9ce8"
                     ]
                 },
-                "currentHeight": 257,
+                "currentHeight": 36,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -4551,6 +4551,847 @@
             "state": {
                 "start": 65,
                 "end": 65,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "f2c1b3b1-1c4d-4799-e9de-d5e2bee6d120"
+                    ]
+                },
+                "currentHeight": 295,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 32
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
+                    "resultId": "f2c1b3b1-1c4d-4799-e9de-d5e2bee6d120",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Karthik Prathik",
+                            "2": "150000.00",
+                            "3": 6,
+                            "4": 10,
+                            "5": 720,
+                            "6": "80000.00",
+                            "7": "Yes",
+                            "8": "6000.00",
+                            "9": 7,
+                            "10": "9.50",
+                            "11": "12000.00",
+                            "12": "Transfer",
+                            "13": 70,
+                            "14": "150000.00",
+                            "15": "Platinum",
+                            "16": 25,
+                            "17": "Delayed",
+                            "18": 40,
+                            "19": "Savings",
+                            "20": "12000.00"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Vinay",
+                            "2": "90000.00",
+                            "3": 2,
+                            "4": 45,
+                            "5": 680,
+                            "6": "60000.00",
+                            "7": "No",
+                            "8": "0.00",
+                            "9": 3,
+                            "10": "7.00",
+                            "11": "8000.00",
+                            "12": "Withdrawal",
+                            "13": 50,
+                            "14": "90000.00",
+                            "15": "Gold",
+                            "16": 15,
+                            "17": "On\n\tTime",
+                            "18": 0,
+                            "19": "Checking",
+                            "20": "8000.00"
+                        },
+                        {
+                            "0": 3,
+                            "1": "Vijay",
+                            "2": "110000.00",
+                            "3": 8,
+                            "4": 20,
+                            "5": 710,
+                            "6": "90000.00",
+                            "7": "Yes",
+                            "8": "4000.00",
+                            "9": 6,
+                            "10": "8.50",
+                            "11": "15000.00",
+                            "12": "Transfer",
+                            "13": 68,
+                            "14": "110000.00",
+                            "15": "Platinum",
+                            "16": 30,
+                            "17": "Delayed",
+                            "18": 20,
+                            "19": "Savings",
+                            "20": "11000.00"
+                        },
+                        {
+                            "0": 4,
+                            "1": "Veer",
+                            "2": "50000.00",
+                            "3": 1,
+                            "4": 5,
+                            "5": 750,
+                            "6": "50000.00",
+                            "7": "No",
+                            "8": "0.00",
+                            "9": 2,
+                            "10": "5.00",
+                            "11": "3000.00",
+                            "12": "Deposit",
+                            "13": 30,
+                            "14": "50000.00",
+                            "15": "Silver",
+                            "16": 5,
+                            "17": "On Time",
+                            "18": 0,
+                            "19": "Savings",
+                            "20": "9000.00"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Veena",
+                            "2": "120000.00",
+                            "3": 10,
+                            "4": 12,
+                            "5": 780,
+                            "6": "120000.00",
+                            "7": "Yes",
+                            "8": "7000.00",
+                            "9": 8,
+                            "10": "9.00",
+                            "11": "20000.00",
+                            "12": "Transfer",
+                            "13": 72,
+                            "14": "120000.00",
+                            "15": "Platinum",
+                            "16": 22,
+                            "17": "Delayed",
+                            "18": 35,
+                            "19": "Savings",
+                            "20": "15000.00"
+                        },
+                        {
+                            "0": 6,
+                            "1": "Meena",
+                            "2": "30000.00",
+                            "3": 3,
+                            "4": 25,
+                            "5": 690,
+                            "6": "40000.00",
+                            "7": "No",
+                            "8": "0.00",
+                            "9": 1,
+                            "10": "6.00",
+                            "11": "4000.00",
+                            "12": "Withdrawal",
+                            "13": 28,
+                            "14": "30000.00",
+                            "15": "Gold",
+                            "16": 12,
+                            "17": "On\n\tTime",
+                            "18": 0,
+                            "19": "Checking",
+                            "20": "5000.00"
+                        },
+                        {
+                            "0": 7,
+                            "1": "Karthik Singh",
+                            "2": "200000.00",
+                            "3": 7,
+                            "4": 8,
+                            "5": 730,
+                            "6": "100000.00",
+                            "7": "Yes",
+                            "8": "5500.00",
+                            "9": 9,
+                            "10": "10.00",
+                            "11": "18000.00",
+                            "12": "Transfer",
+                            "13": 65,
+                            "14": "200000.00",
+                            "15": "Platinum",
+                            "16": 35,
+                            "17": "Delayed",
+                            "18": 50,
+                            "19": "Savings",
+                            "20": "16000.00"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "customer_id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "customer_name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "balance",
+                            "field": "2",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "account_age",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "last_transaction_days",
+                            "field": "4",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "credit_score",
+                            "field": "5",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "income",
+                            "field": "6",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "overdraft_used",
+                            "field": "7",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "overdraft_amount",
+                            "field": "8",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "investment_duration",
+                            "field": "9",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "return_rate",
+                            "field": "10",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "transaction_amount",
+                            "field": "11",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "transaction_type",
+                            "field": "12",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "age",
+                            "field": "13",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "account_balance",
+                            "field": "14",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "card_type",
+                            "field": "15",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "usage_frequency",
+                            "field": "16",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "repayment_status",
+                            "field": "17",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "delay_days",
+                            "field": "18",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "account_type",
+                            "field": "19",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "avg_monthly_balance",
+                            "field": "20",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 7 records retrieved in 10.678ms"
+                    },
+                    "totalRowCount": 7,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select * from finance_customers",
+                    "updatable": true,
+                    "fullTableName": "finance_customers"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 66,
+                "end": 75,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "51db79f8-8ac1-46e2-a662-473bae7fbc33"
+                    ]
+                },
+                "currentHeight": 242,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 298
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "2e8abb8f-3cb4-424c-ca53-138d0b3ac0a4",
+                    "resultId": "51db79f8-8ac1-46e2-a662-473bae7fbc33",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Karthik Prathik",
+                            "2": 70,
+                            "3": "150000.00",
+                            "4": "Senior Stable"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Vinay",
+                            "2": 50,
+                            "3": "90000.00",
+                            "4": "Not a Senior"
+                        },
+                        {
+                            "0": 3,
+                            "1": "Vijay",
+                            "2": 68,
+                            "3": "110000.00",
+                            "4": "Senior Stable"
+                        },
+                        {
+                            "0": 4,
+                            "1": "Veer",
+                            "2": 30,
+                            "3": "50000.00",
+                            "4": "Not a Senior"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Veena",
+                            "2": 72,
+                            "3": "120000.00",
+                            "4": "Senior Stable"
+                        },
+                        {
+                            "0": 6,
+                            "1": "Meena",
+                            "2": 28,
+                            "3": "30000.00",
+                            "4": "Not a Senior"
+                        },
+                        {
+                            "0": 7,
+                            "1": "Karthik Singh",
+                            "2": 65,
+                            "3": "200000.00",
+                            "4": "Not a Senior"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "customer_id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "customer_name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "age",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "account_balance",
+                            "field": "3",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "status",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 7 records retrieved in 1.726ms"
+                    },
+                    "totalRowCount": 7,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select customer_id, customer_name, age, account_balance,\n    case\n        when age > 65 then\n            case\n                when account_balance < 1000 then \"At Risk Senior\"\n                else \"Senior Stable\"\n            end\n        else \"Not a Senior\"\n    end as status\nfrom finance_customers",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 76,
+                "end": 76,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
