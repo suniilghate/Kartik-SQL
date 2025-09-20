@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\nshow databases;\nuse test;\nshow tables;\nselect * from customerusagenew;\nselect customer_id, customer_name, data_used_gb, call_minutes,\n    case\n        when data_used_gb > 25 then\n            case\n                when call_minutes > 1000 then \"Gold Tier\"\n                else \"Silver Tier\"\n            end\n        else\n            case\n                when call_minutes > 800 then \"Bronze Tier\"\n                else \"Basic Tier\"\n            end\n    end as status\nfrom customerusagenew;\n",
+    "content": "\\about\nshow databases;\nuse test;\nshow tables;\nselect * from customerusagenew;\nselect customer_id, customer_name, data_used_gb, call_minutes,\n    case\n        when data_used_gb > 25 then\n            case\n                when call_minutes > 1000 then \"Gold Tier\"\n                else \"Silver Tier\"\n            end\n        else\n            case\n                when call_minutes > 800 then \"Bronze Tier\"\n                else \"Basic Tier\"\n            end\n    end as status\nfrom customerusagenew;\nselect * from customerusagenew;\nuse test;\n\nselect customer_id, customer_name, plan_type, monthly_bill,\n    case\n        when plan_type = \"Postpaid\" then\n            case\n                when monthly_bill < 500 then \"Underutilized Postpaid\"\n                else \"Plan Matches Usage\"\n            end\n        when plan_type = \"Prepaid\" then\n            case\n                when monthly_bill > 900 then \"Overpaying Prepaid\"\n                else \"Plan Matches Usage\"\n            end\n        else \"Plan Matches Usage\"\n    end as status\nfrom customerusagenew;\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -13,13 +13,13 @@
     "viewState": {
         "cursorState": [
             {
-                "inSelectionMode": false,
+                "inSelectionMode": true,
                 "selectionStart": {
-                    "lineNumber": 20,
-                    "column": 1
+                    "lineNumber": 37,
+                    "column": 23
                 },
                 "position": {
-                    "lineNumber": 20,
+                    "lineNumber": 23,
                     "column": 1
                 }
             }
@@ -27,10 +27,10 @@
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 6,
+                "lineNumber": 23,
                 "column": 1
             },
-            "firstPositionDeltaTop": 1
+            "firstPositionDeltaTop": 11
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -700,6 +700,447 @@
             "state": {
                 "start": 20,
                 "end": 20,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "de08cf61-f192-4ca5-9bd4-68547a09e7ff"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 31
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "f7a15a4b-d691-4e5f-e8ca-a44c7bfe7f48",
+                    "resultId": "de08cf61-f192-4ca5-9bd4-68547a09e7ff",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Veena",
+                            "2": "Postpaid",
+                            "3": 9,
+                            "4": 471,
+                            "5": "842.03"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Veer",
+                            "2": "Postpaid",
+                            "3": 7,
+                            "4": 354,
+                            "5": "434.94"
+                        },
+                        {
+                            "0": 3,
+                            "1": "Mohan",
+                            "2": "Prepaid",
+                            "3": 33,
+                            "4": 497,
+                            "5": "569.23"
+                        },
+                        {
+                            "0": 4,
+                            "1": "Pratik",
+                            "2": "Prepaid",
+                            "3": 15,
+                            "4": 113,
+                            "5": "1107.48"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Farhan",
+                            "2": "Prepaid",
+                            "3": 14,
+                            "4": 1284,
+                            "5": "845.75"
+                        },
+                        {
+                            "0": 6,
+                            "1": "Jiya",
+                            "2": "Postpaid",
+                            "3": 28,
+                            "4": 1578,
+                            "5": "1325.15"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "customer_id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "customer_name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "plan_type",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "data_used_gb",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "call_minutes",
+                            "field": "4",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "monthly_bill",
+                            "field": "5",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 461.889ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select * from customerusagenew",
+                    "updatable": true,
+                    "fullTableName": "customerusagenew"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 21,
+                "end": 22,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "fcda9461-7ccc-4b67-ab04-42e6cf0168cb",
+                            "content": "OK, 0 records retrieved in 387.275ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 9
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 9,
+                            "length": 1
+                        },
+                        "contentStart": 8,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 23,
+                "end": 37,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "f5e746d5-4724-4186-a295-ac12e93837ff"
+                    ]
+                },
+                "currentHeight": 217,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 510
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "f7a15a4b-d691-4e5f-e8ca-a44c7bfe7f48",
+                    "resultId": "f5e746d5-4724-4186-a295-ac12e93837ff",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Veena",
+                            "2": "Postpaid",
+                            "3": "842.03",
+                            "4": "Plan Matches Usage"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Veer",
+                            "2": "Postpaid",
+                            "3": "434.94",
+                            "4": "Underutilized Postpaid"
+                        },
+                        {
+                            "0": 3,
+                            "1": "Mohan",
+                            "2": "Prepaid",
+                            "3": "569.23",
+                            "4": "Plan Matches Usage"
+                        },
+                        {
+                            "0": 4,
+                            "1": "Pratik",
+                            "2": "Prepaid",
+                            "3": "1107.48",
+                            "4": "Overpaying Prepaid"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Farhan",
+                            "2": "Prepaid",
+                            "3": "845.75",
+                            "4": "Plan Matches Usage"
+                        },
+                        {
+                            "0": 6,
+                            "1": "Jiya",
+                            "2": "Postpaid",
+                            "3": "1325.15",
+                            "4": "Plan Matches Usage"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "customer_id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "customer_name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "plan_type",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "monthly_bill",
+                            "field": "3",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "status",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 1.578ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select customer_id, customer_name, plan_type, monthly_bill,\n    case\n        when plan_type = \"Postpaid\" then\n            case\n                when monthly_bill < 500 then \"Underutilized Postpaid\"\n                else \"Plan Matches Usage\"\n            end\n        when plan_type = \"Prepaid\" then\n            case\n                when monthly_bill > 900 then \"Overpaying Prepaid\"\n                else \"Plan Matches Usage\"\n            end\n        else \"Plan Matches Usage\"\n    end as status\nfrom customerusagenew",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 38,
+                "end": 38,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
