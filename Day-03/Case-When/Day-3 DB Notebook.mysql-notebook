@@ -1,0 +1,720 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "DB Notebook",
+    "content": "\\about\nshow databases;\nuse test;\nshow tables;\nselect * from customerusagenew;\nselect customer_id, customer_name, data_used_gb, call_minutes,\n    case\n        when data_used_gb > 25 then\n            case\n                when call_minutes > 1000 then \"Gold Tier\"\n                else \"Silver Tier\"\n            end\n        else\n            case\n                when call_minutes > 800 then \"Bronze Tier\"\n                else \"Basic Tier\"\n            end\n    end as status\nfrom customerusagenew;\n",
+    "options": {
+        "tabSize": 4,
+        "indentSize": 4,
+        "insertSpaces": true,
+        "defaultEOL": "LF",
+        "trimAutoWhitespace": true
+    },
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": false,
+                "selectionStart": {
+                    "lineNumber": 20,
+                    "column": 1
+                },
+                "position": {
+                    "lineNumber": 20,
+                    "column": 1
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 6,
+                "column": 1
+            },
+            "firstPositionDeltaTop": 1
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 1,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "content": "Welcome to the MySQL Shell - DB Notebook.\n\nPress Ctrl+Enter to execute the code block.\n\nExecute \\sql to switch to SQL, \\js to JavaScript and \\ts to TypeScript mode.\nExecute \\help or \\? for help;",
+                            "language": "ansi"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 6
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 2,
+                "end": 2,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "0c07b82c-9343-49ca-d885-1a7b0a11278d"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 15
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 15,
+                            "length": 0
+                        },
+                        "contentStart": 14,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "f7a15a4b-d691-4e5f-e8ca-a44c7bfe7f48",
+                    "resultId": "0c07b82c-9343-49ca-d885-1a7b0a11278d",
+                    "rows": [
+                        {
+                            "0": "demolara"
+                        },
+                        {
+                            "0": "information_schema"
+                        },
+                        {
+                            "0": "lara-app"
+                        },
+                        {
+                            "0": "makeprosimp"
+                        },
+                        {
+                            "0": "mysql"
+                        },
+                        {
+                            "0": "performance_schema"
+                        },
+                        {
+                            "0": "pharma_db"
+                        },
+                        {
+                            "0": "phpmyadmin"
+                        },
+                        {
+                            "0": "retaildb"
+                        },
+                        {
+                            "0": "test"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Database",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 10 records retrieved in 29.734ms"
+                    },
+                    "totalRowCount": 10,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "show databases",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 3,
+                "end": 3,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "ac7210d1-f91d-4835-bc9c-cae49f744837",
+                            "content": "OK, 0 records retrieved in 969.764ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 9
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 4,
+                "end": 4,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "d6fc42f1-14ac-45c0-e60b-409529a36506"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 12
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 12,
+                            "length": 0
+                        },
+                        "contentStart": 11,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "f7a15a4b-d691-4e5f-e8ca-a44c7bfe7f48",
+                    "resultId": "d6fc42f1-14ac-45c0-e60b-409529a36506",
+                    "rows": [
+                        {
+                            "0": "carservicerecords"
+                        },
+                        {
+                            "0": "customerusage"
+                        },
+                        {
+                            "0": "customerusagenew"
+                        },
+                        {
+                            "0": "employee"
+                        },
+                        {
+                            "0": "finance_customers"
+                        },
+                        {
+                            "0": "flightbookings"
+                        },
+                        {
+                            "0": "info"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Tables_in_test",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 7 records retrieved in 2.285ms"
+                    },
+                    "totalRowCount": 7,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "show tables",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 5,
+                "end": 5,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "5f1ed70e-b719-4e80-db73-e2858d99fd95"
+                    ]
+                },
+                "currentHeight": 217,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 31
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "f7a15a4b-d691-4e5f-e8ca-a44c7bfe7f48",
+                    "resultId": "5f1ed70e-b719-4e80-db73-e2858d99fd95",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Veena",
+                            "2": "Postpaid",
+                            "3": 9,
+                            "4": 471,
+                            "5": "842.03"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Veer",
+                            "2": "Postpaid",
+                            "3": 7,
+                            "4": 354,
+                            "5": "434.94"
+                        },
+                        {
+                            "0": 3,
+                            "1": "Mohan",
+                            "2": "Prepaid",
+                            "3": 33,
+                            "4": 497,
+                            "5": "569.23"
+                        },
+                        {
+                            "0": 4,
+                            "1": "Pratik",
+                            "2": "Prepaid",
+                            "3": 15,
+                            "4": 113,
+                            "5": "1107.48"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Farhan",
+                            "2": "Prepaid",
+                            "3": 14,
+                            "4": 1284,
+                            "5": "845.75"
+                        },
+                        {
+                            "0": 6,
+                            "1": "Jiya",
+                            "2": "Postpaid",
+                            "3": 28,
+                            "4": 1578,
+                            "5": "1325.15"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "customer_id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "customer_name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "plan_type",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "data_used_gb",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "call_minutes",
+                            "field": "4",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        },
+                        {
+                            "title": "monthly_bill",
+                            "field": "5",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": "NULL"
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 270.888ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select * from customerusagenew",
+                    "updatable": true,
+                    "fullTableName": "customerusagenew"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 6,
+                "end": 19,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "a428ec6e-361c-4ad1-fb74-c927111f2cc7"
+                    ]
+                },
+                "currentHeight": 217,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 413
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "f7a15a4b-d691-4e5f-e8ca-a44c7bfe7f48",
+                    "resultId": "a428ec6e-361c-4ad1-fb74-c927111f2cc7",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Veena",
+                            "2": 9,
+                            "3": 471,
+                            "4": "Basic Tier"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Veer",
+                            "2": 7,
+                            "3": 354,
+                            "4": "Basic Tier"
+                        },
+                        {
+                            "0": 3,
+                            "1": "Mohan",
+                            "2": 33,
+                            "3": 497,
+                            "4": "Silver Tier"
+                        },
+                        {
+                            "0": 4,
+                            "1": "Pratik",
+                            "2": 15,
+                            "3": 113,
+                            "4": "Basic Tier"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Farhan",
+                            "2": 14,
+                            "3": 1284,
+                            "4": "Bronze Tier"
+                        },
+                        {
+                            "0": 6,
+                            "1": "Jiya",
+                            "2": 28,
+                            "3": 1578,
+                            "4": "Gold Tier"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "customer_id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "customer_name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "data_used_gb",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "call_minutes",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "status",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 131.332ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "select customer_id, customer_name, data_used_gb, call_minutes,\n    case\n        when data_used_gb > 25 then\n            case\n                when call_minutes > 1000 then \"Gold Tier\"\n                else \"Silver Tier\"\n            end\n        else\n            case\n                when call_minutes > 800 then \"Bronze Tier\"\n                else \"Basic Tier\"\n            end\n    end as status\nfrom customerusagenew",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 20,
+                "end": 20,
+                "language": "mysql",
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 0
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        }
+    ]
+}
